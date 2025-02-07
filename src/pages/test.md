@@ -1,8 +1,8 @@
 ---
 layout : ../../layouts/Md_Post_Layouts
 title:title
-Date :yyyy-mm-dd
-description : setumei
+Date :2024-01-01
+description :'a'
 author : "suzuki hanako"
 image:
   url :
