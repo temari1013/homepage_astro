@@ -1,11 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro' ;
-const pagetitle =  'タイトル';
-
+const pagetitle =  'ホーム';
 --- 
 <BaseLayout pageTitle = {pagetitle}>
-  <h1 class="p-8 text-center text-blue-400 underline">
-  Hello world!
-</h1>
+  <slot />
 
 </BaseLayout>

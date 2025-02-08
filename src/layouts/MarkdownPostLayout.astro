@@ -4,11 +4,14 @@ import BaseLayout from './BaseLayout.astro';
 const { frontmatter } = Astro.props;
 ---
 <BaseLayout pageTitle={frontmatter.title}>
-<meta charset="UTF-8">
+  <meta charset="UTF-8">
+
+
 <p>{frontmatter.pubDate.toString().slice(0,10)}</p>
 <p><em>{frontmatter.description}</em></p>
 <p>著者: {frontmatter.author}</p>
    <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
+
 
   <div class="tags">
     {frontmatter.tags.map((tag) => (
@@ -16,5 +19,7 @@ const { frontmatter } = Astro.props;
     ))}
   </div>
   <slot />
+
+
 </BaseLayout>
 

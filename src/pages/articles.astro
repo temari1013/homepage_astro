@@ -1,14 +1,18 @@
 ---
 import BlogPost from '../components/BlogPost.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
-const pagetitle ="Astro";
+const pagetitle ="記事一覧";
 const allPosts = await Astro.glob('../pages/posts/*.md');
 ---
 
+<BaseLayout pageTitle = {pagetitle}>
+       <h1>
+              {pagetitle}
+       </h1>
+<ul>
+       {allPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
+</ul>
+</BaseLayout>
 <meta charset = "UTF-8">
 
-<h1>記事一覧</h1>
 
-<ul>
-      {allPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
-</ul>
