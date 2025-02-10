@@ -24,7 +24,7 @@ tailwindCSSがバージョン4系になったときにインストール周り�
 astroくんがmdから変換したものにtailwind typographyを当てようとしたときに、前述のバージョン更新前の情報を参考にしてだいぶハマったが、[ドキュメント](https://docs.astro.build/ja/recipes/tailwind-rendered-markdown/)にちゃんと書いてあった。
 資料ってやつ読んだほうがいいらしい。
 
-aboutページとサイドバー、タグ機能はそのうち生える予定
+aboutページとサイドバー、タグ機能、ちゃんとしたレスポンシブ対応はそのうち生える予定
 
 
 
