@@ -15,16 +15,14 @@ import Prose from '../components/Prose.astro';
     {frontmatter.tags.map((tag) => (
       <p class="tag"><a href={`/tags/${tag}`} class="bg-blue-100 text-blue-600 text-sm px-3 py-1 hover:bg-blue-200 transition">{tag}</a></p>
     ))}
-    </div>
+  </div>
 </div>
 
 <div class="max-w-3xl mx-auto mt-4 pt-4 pb-8 px-8 bg-white shadow-lg rounded-lg min-h-screen " >
 
-<Prose>
-<!-- <h2 class ="">{frontmatter.title}</h2> --!>
-<slot />
-</Prose>
-</div>
+  <Prose>
+  <slot />
+  </Prose>
 </div>
 
 </BaseLayout>
