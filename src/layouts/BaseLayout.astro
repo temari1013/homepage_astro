@@ -22,14 +22,14 @@ const { pageTitle } = Astro.props;
     <Header pageTitle={pageTitle}/>
     <NonmdNav />
 
-    <div class ="flex">
-      <main class ="w-full px-4 md:w-3/4">
+  <div class ="flex">
+    <main class ="w-full  md:w-3/4">
        <slot />
     </main>
-<aside class="hidden md:w-1/4 p-4">
+    <aside class="hidden md:block px-4  md:w-1/4 ">
         <Sidevar />
-      </aside>
-    </div>
+    </aside>
+  </div>
 
         <Footer />
   </body>

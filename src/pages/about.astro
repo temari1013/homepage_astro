@@ -2,10 +2,11 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro' ;
 const pagetitle =  'タイトル';
-
+import Prose from '../components/Prose.astro';
 --- 
 <BaseLayout pageTitle = {pagetitle}>
 
+<Prose>
 
   <div class="max-w-3xl mx-auto mt-4 pt-4 pb-8 px-8 bg-white shadow-lg rounded-lg min-h-screen " >
     <h2>このページについて</h2>
@@ -15,8 +16,8 @@ const pagetitle =  'タイトル';
       <li>サイドバーの作成</li>
       <li>タグ検索機能の作成</li>
       <li>記事一覧の改善</li>
-      <li>概要ページにCSSを当てる</li>
     </ul>
   </div>
+  </Prose>
 
 </BaseLayout>
