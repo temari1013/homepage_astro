@@ -3,15 +3,30 @@
 import BaseLayout from '../layouts/BaseLayout.astro' ;
 const pagetitle =  'タイトル';
 import Prose from '../components/Prose.astro';
+import { Image } from 'astro:assets';
 --- 
 <BaseLayout pageTitle = {pagetitle}>
+
+
+
 
 <Prose>
   <div class="max-w-3xl mx-auto mt-4 pt-2 pb-8 px-8 bg-white shadow-lg rounded-lg min-h-screen " >
       <h2 class = "mt-4">概要その他</h2>
-      <img src="/path/to/icon.png" alt="アイコン" class="w-16 h-16 rounded-full">
 
-      <h3>リンク
+    
+      <p class ="my-0 py-0 mb-0 text-slate-700"> 著者近影</p>
+<Image
+    src="/icon.jpg"
+  alt="説明文"
+  width="150"
+        height="150"
+        class ="mt-0 mb-0"
+      />
+      
+
+      <h3>
+      連絡先
       </h3>
   <div class=" justify-center space-x-4 mb-4">
     <p>Twitter:
@@ -24,7 +39,17 @@ import Prose from '../components/Prose.astro';
      <a href="https://github.com/temari1013" class="text-blue-500 hover:underline">
       @temari1013
      </a>
-    </p>
+        </p>
+
+  <h3>
+          このサイトについて
+  </h3>
+  <div class=" justify-center space-x-4 mb-4">
+          <p>
+このサイトに掲載している情報に問題がありましたらTwitterの方にご連絡ください。
+          </p>
+
+
   </div>
   </Prose>
 
