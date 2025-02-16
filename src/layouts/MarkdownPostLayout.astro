@@ -7,18 +7,19 @@ import Prose from '../components/Prose.astro';
   <meta charset="UTF-8">
 
 <div class="max-w-3xl mx-auto mt-4 ">
-<p class="text-gray-600 text-sm">{frontmatter.pubDate.toString().slice(0,10)}</p>
 <!-- <p><em>{frontmatter.description}</em></p> --!>
 <!-- <p>著者: {frontmatter.author}</p> --!>
 <!--  <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} /> --!>
-  <div class="flex flex-wrap gap-2  ">
-    {frontmatter.tags.map((tag) => (
-      <p class="tag"><a href={`/tags/${tag}`} class="bg-blue-100 text-blue-600 text-sm px-3 py-1 hover:bg-blue-200 transition">{tag}</a></p>
-    ))}
-  </div>
+ 
 </div>
 
 <div class="max-w-3xl mx-auto mt-4 pt-4 pb-8 px-8 bg-white shadow-lg rounded-lg min-h-screen " >
+    <p class="text-gray-600 text-sm">{frontmatter.pubDate.toString().slice(0,10)}</p>
+ <div class="flex flex-wrap gap-2  ">
+    {frontmatter.tags.map((tag) => (
+    <p class="tag"><a href={`/tags/${tag}`} class="bg-blue-100 text-blue-600 text-sm px-3 py-1 hover:bg-blue-200 transition">{tag}</a></p>
+    ))}
+ </div>
 
   <Prose>
   <slot />
