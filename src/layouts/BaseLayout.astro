@@ -1,7 +1,7 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import Sidevar from '../components/Sidevar.astro';
+import Sidebar from '../components/Sidebar.astro';
 import NonmdNav from '../components/nonmd_Nav.astro';
 import '../styles/global.css';
 const { pageTitle } = Astro.props;
@@ -26,8 +26,10 @@ const { pageTitle } = Astro.props;
     <main class ="w-full  md:w-3/4">
        <slot />
     </main>
-    <aside class="hidden md:block px-4  md:w-1/4 ">
-        <Sidevar />
+      <aside class="hidden md:block px-4  md:w-1/4 ">
+        <div class =" shadow-lg  semi-rounded max-w-1xl mx-auto mt-4 pt-4 px-8 bg-white  min-h-screen " >
+          <Sidebar />
+        </div>
     </aside>
   </div>
 
