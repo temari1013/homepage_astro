@@ -1,6 +1,7 @@
 ---
 const { title, url ,pubDate } = Astro.props;
+import '../styles/global.css';
 ---
 <meta charset="UTF-8">
 
-<li><a href={url}>{title}</a></li>
+<li><a href={url}>{title}<span style={{ color: '#999' , marginLeft: '8px' } }>{ pubDate.slice(0, 10)}</span></a></li>

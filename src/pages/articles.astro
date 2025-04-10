@@ -3,6 +3,15 @@ import BlogPost from '../components/BlogPost.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 const pagetitle ="記事一覧";
 const allPosts = await Astro.glob('../pages/posts/*.md');
+function parseDate(str :string){
+   return parseInt( str.replace(/-/g, ''), 10);
+};
+
+const sortedPosts =  allPosts.sort((a,b) =>{
+const dateA =parseDate(a.frontmatter.pubDate);
+const dateB =parseDate(b.frontmatter.pubDate);
+return dateB - dateA;
+});
 ---
 
 <BaseLayout pageTitle = {pagetitle}>
@@ -12,7 +21,7 @@ const allPosts = await Astro.glob('../pages/posts/*.md');
           <h2>記事一覧</h2>    
 
                      <ul >
-        {allPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} pubDate={post.frontmatter.pubDate} />)}
+        {sortedPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} pubDate={post.frontmatter.pubDate} />)}
                             </ul>       
                      </div>
  </div>
