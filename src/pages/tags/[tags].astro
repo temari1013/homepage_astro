@@ -10,7 +10,7 @@ export async function getStaticPaths() {
   return uniqueTags.map((tag) => {
     const filteredPosts = allPosts.filter((post: any) => post.frontmatter.tags.includes(tag))
     return {
-      params: { tags :tag },
+      params: { tags: tag },
       props: { posts: filteredPosts }
     }
   })
@@ -22,11 +22,16 @@ const { posts } = Astro.props
 
 <BaseLayout pageTitle={tags}>
   <div class="max-w-3xl mx-auto mt-4 text-slate-900">
-    <div class="max-w-3xl mx-auto mt-4 px-4 pt-4 pb-8 bg-white shadow-lg semi-rounded rounded-lg min-h-screen prose">
+  
+    
       <p>タグ:{tags}</p>
       <ul>
-        {posts.map((post: any) => <BlogPost url={post.url} title={post.frontmatter.title} pubDate={post.frontmatter.pubDate}/>)}
+        {
+          posts.map((post: any) => (
+            <BlogPost url={post.url} title={post.frontmatter.title} pubDate={post.frontmatter.pubDate} />
+          ))
+        }
       </ul>
-    </div>
+    
   </div>
 </BaseLayout>

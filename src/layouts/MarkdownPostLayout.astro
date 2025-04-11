@@ -7,7 +7,7 @@ import Prose from '../components/Prose.astro'
 <BaseLayout pageTitle={frontmatter.title}>
   <meta charset="UTF-8" />
 
-  <div class="max-w-3xl mx-auto mt-4 pt-4 pb-8 px-8 bg-white shadow-lg rounded-lg min-h-screen">
+  
     <p class="text-gray-600 text-sm">{frontmatter.pubDate.toString().slice(0, 10)}</p>
     <div class="flex flex-wrap">
       {
@@ -37,5 +37,5 @@ import Prose from '../components/Prose.astro'
     <Prose>
       <slot />
     </Prose>
-  </div>
+
 </BaseLayout>
