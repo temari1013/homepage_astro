@@ -1,20 +1,21 @@
 ---
-import BaseLayout from './BaseLayout.astro';
-const { frontmatter } = Astro.props;
-import Prose from '../components/Prose.astro';
+import BaseLayout from './BaseLayout.astro'
+const { frontmatter } = Astro.props
+import Prose from '../components/Prose.astro'
 ---
+
 <BaseLayout pageTitle={frontmatter.title}>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
 
- 
-
-<div class="max-w-3xl mx-auto mt-4 pt-4 pb-8 px-8 bg-white shadow-lg rounded-lg min-h-screen " >
-    <p class="text-gray-600 text-sm">{frontmatter.pubDate.toString().slice(0,10)}</p>
- <div class="flex flex-wrap  ">
-    {frontmatter.tags.map((tag:string) => (
-<p class="tag"><a href={`/tags/${tag}`}
-class=
-      "tag
+  <div class="max-w-3xl mx-auto mt-4 pt-4 pb-8 px-8 bg-white shadow-lg rounded-lg min-h-screen">
+    <p class="text-gray-600 text-sm">{frontmatter.pubDate.toString().slice(0, 10)}</p>
+    <div class="flex flex-wrap">
+      {
+        frontmatter.tags.map((tag: string) => (
+          <p class="tag">
+            <a
+              href={`/tags/${tag}`}
+              class="tag
       inline-block
       mx-1 my-0.5
       px-2 py-1 
@@ -25,14 +26,16 @@ class=
    hover:opacity-60
    transition-all duration-300 ease-in-out 
       "
->{tag}</a></p>
-    ))}
- </div>
+            >
+              {tag}
+            </a>
+          </p>
+        ))
+      }
+    </div>
 
-  <Prose>
-  <slot />
-  </Prose>
-</div>
-
+    <Prose>
+      <slot />
+    </Prose>
+  </div>
 </BaseLayout>
-

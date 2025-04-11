@@ -1,41 +1,39 @@
 ---
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import Sidebar from '../components/Sidebar.astro';
-import NonmdNav from '../components/nonmd_Nav.astro';
-import '../styles/global.css';
-const { pageTitle } = Astro.props;
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+import Sidebar from '../components/Sidebar.astro'
+import NonmdNav from '../components/nonmd_Nav.astro'
+import '../styles/global.css'
+const { pageTitle } = Astro.props
 ---
+
 <html lang="ja">
   <head>
     <meta charset="utf-8" />
-    <meta name="twitter:image" content="https://docs.astro.build/assets/arc.webp">
+    <meta name="twitter:image" content="https://docs.astro.build/assets/arc.webp" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
   </head>
 
-
-
-  <body class = "bg-slate-100">
-    <Header pageTitle={pageTitle}/>
+  <body class="bg-slate-100">
+    <Header pageTitle={pageTitle} />
     <NonmdNav />
 
-  <div class ="flex">
-      <main class ="w-full  md:w-3/4">
-
-  <div class="max-w-3xl mx-auto mt-4 pt-2 pb-8 px-8 bg-white shadow-lg rounded-lg min-h-screen " >
+    <div class="flex">
+      <main class="w-full md:w-3/4">
+        <div class="max-w-3xl mx-auto mt-4 pt-2 pb-8 px-8 bg-white shadow-lg rounded-lg min-h-screen">
           <slot />
-          </div>
-    </main>
-      <aside class="hidden md:block px-4  md:w-1/4 ">
-        <div class =" shadow-lg  rounded-lg max-w-1xl mx-auto mt-4 pt-4 px-8 bg-white  min-h-screen " >
+        </div>
+      </main>
+      <aside class="hidden md:block px-4 md:w-1/4">
+        <div class="shadow-lg rounded-lg max-w-1xl mx-auto mt-4 pt-4 px-8 bg-white min-h-screen">
           <Sidebar />
         </div>
-    </aside>
-  </div>
+      </aside>
+    </div>
 
-        <Footer />
+    <Footer />
   </body>
 </html>
