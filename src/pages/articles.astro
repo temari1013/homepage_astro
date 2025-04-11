@@ -15,18 +15,15 @@ const dateB =parseDate(b.frontmatter.pubDate);
 return dateB - dateA;
 });
 ---
-
 <BaseLayout pageTitle = {pagetitle}>
       
-       <div class="max-w-3xl mx-auto mt-4 text-slate-900 ">
-<div class="max-w-3xl mx-auto mt-4 px-4 pt-4 pb-8 bg-white shadow-lg  semi-rounded rounded-lg min-h-screen prose" >
+       <div class=" prose max-w-3xl mx-auto mt-4 text-slate-900 ">
           <h2>記事一覧</h2>    
 
                      <ul >
         {sortedPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} pubDate={post.frontmatter.pubDate} />)}
                             </ul>       
                      </div>
- </div>
 </BaseLayout>
 <meta charset = "UTF-8">
 
