@@ -1,13 +1,13 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: "astroってやつを使うといいらしい"
-author: "enaga"
-description: "わいわい"
-image: 
-  url: "https://docs.astro.build/assets/arc.webp"  
-  alt: "The Astro logo on a dark background with a purple gradient arc."  
+title: 'astroってやつを使うといいらしい'
+author: 'enaga'
+description: 'わいわい'
+image:
+  url: 'https://docs.astro.build/assets/arc.webp'
+  alt: 'The Astro logo on a dark background with a purple gradient arc.'
 pubDate: 2025-02-09
-tags: ["tailwind_CSS","nginx","astro"]
+tags: ['tailwind_CSS', 'nginx', 'astro']
 ---
 
 ## astroってやつを使うと良いらしい
@@ -15,7 +15,6 @@ tags: ["tailwind_CSS","nginx","astro"]
 せっかくshimaena.gaドメインを取ったので活用することに
 
 astroのチュートリアルはスプラトゥーンのチュートリアルより優しいのでぽんかすでもクリアできる。
-
 
 tailwindCSSがバージョン4系になったときにインストール周りが変わったらしく、インターネットに落ちてる適当な情報を参考にして痛い目にあった。
 
@@ -25,7 +24,3 @@ astroくんがmdから変換したものにtailwind typographyを当てようと
 資料ってやつ読んだほうがいいらしい。
 
 aboutページとサイドバー、タグ機能、ちゃんとしたレスポンシブ対応はそのうち生える予定
-
-
-
-
