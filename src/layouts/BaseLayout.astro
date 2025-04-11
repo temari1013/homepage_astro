@@ -23,8 +23,11 @@ const { pageTitle } = Astro.props;
     <NonmdNav />
 
   <div class ="flex">
-    <main class ="w-full  md:w-3/4">
-       <slot />
+      <main class ="w-full  md:w-3/4">
+
+  <div class="max-w-3xl mx-auto mt-4 pt-2 pb-8 px-8 bg-white shadow-lg rounded-lg min-h-screen " >
+          <slot />
+          </div>
     </main>
       <aside class="hidden md:block px-4  md:w-1/4 ">
         <div class =" shadow-lg  rounded-lg max-w-1xl mx-auto mt-4 pt-4 px-8 bg-white  min-h-screen " >
