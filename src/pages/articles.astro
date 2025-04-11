@@ -1,30 +1,32 @@
 ---
-import type { MarkdownInstance } from "astro";
-import BlogPost from '../components/BlogPost.astro';
-import BaseLayout from '../layouts/BaseLayout.astro';
-const pagetitle ="記事一覧";
-const importedPosts = import.meta.glob('../pages/posts/*.md' ,{ eager: true });
-const allPosts = Object.values(importedPosts).reverse() as MarkdownInstance<Record<string, any>>[];
-function parseDate(str :string){
-   return parseInt( str.replace(/-/g, ''), 10);
-};
+import type { MarkdownInstance } from 'astro'
+import BlogPost from '../components/BlogPost.astro'
+import BaseLayout from '../layouts/BaseLayout.astro'
+const pagetitle = '記事一覧'
+const importedPosts = import.meta.glob('../pages/posts/*.md', { eager: true })
+const allPosts = Object.values(importedPosts).reverse() as MarkdownInstance<Record<string, any>>[]
+function parseDate(str: string) {
+  return parseInt(str.replace(/-/g, ''), 10)
+}
 
-const sortedPosts =  allPosts.sort((a,b) =>{
-const dateA =parseDate(a.frontmatter.pubDate);
-const dateB =parseDate(b.frontmatter.pubDate);
-return dateB - dateA;
-});
+const sortedPosts = allPosts.sort((a, b) => {
+  const dateA = parseDate(a.frontmatter.pubDate)
+  const dateB = parseDate(b.frontmatter.pubDate)
+  return dateB - dateA
+})
 ---
-<BaseLayout pageTitle = {pagetitle}>
-      
-      <div class=" prose max-w-3xl mx-auto mt-4 text-slate-900 ">
-          <h2>記事一覧</h2>    
 
-            <ul >
-               {sortedPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} pubDate={post.frontmatter.pubDate} />)}
-            </ul>       
-      </div>
+<BaseLayout pageTitle={pagetitle}>
+  <div class="prose max-w-3xl mx-auto mt-4 text-slate-900">
+    <h2>記事一覧</h2>
+
+    <ul>
+      {
+        sortedPosts.map((post) => (
+          <BlogPost url={post.url} title={post.frontmatter.title} pubDate={post.frontmatter.pubDate} />
+        ))
+      }
+    </ul>
+  </div>
 </BaseLayout>
-<meta charset = "UTF-8">
-
- 
+<meta charset="UTF-8" />
