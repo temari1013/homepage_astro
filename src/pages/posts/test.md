@@ -1,13 +1,13 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: "test"
-author: "word tarou"
-description: "abcde"
-image: 
-  url: "https://docs.astro.build/assets/arc.webp"  
-  alt: "The Astro logo on a dark background with a purple gradient arc."  
+title: 'test'
+author: 'word tarou'
+description: 'abcde'
+image:
+  url: 'https://docs.astro.build/assets/arc.webp'
+  alt: 'The Astro logo on a dark background with a purple gradient arc.'
 pubDate: 2022-07-08
-tags: ["astro", "blogging"]
+tags: ['astro', 'blogging']
 ---
 
 ## タイトル
@@ -19,16 +19,21 @@ english
 - 列挙２
 
 # 見出し H1
+
 ## 見出し H2
+
 ### 見出し H3
+
 #### 見出し H4
+
 ##### 見出し H5
+
 ###### 見出し H6
 
 ---
 
 **太字 (Bold)**
-*斜体 (Italic)*
+_斜体 (Italic)_
 ~~取り消し線 (Strikethrough)~~
 `インラインコード`
 
@@ -45,14 +50,13 @@ english
    2. さらにネスト
 
 | テーブル | ヘッダー |
-|----------|---------|
-| セル 1   | セル 2  |
-| セル 3   | セル 4  |
+| -------- | -------- |
+| セル 1   | セル 2   |
+| セル 3   | セル 4   |
 
 ```js
 // コードブロック (JavaScript)
-console.log("Hello, Markdown!");
+console.log('Hello, Markdown!')
 ```
 
 [google](https://google.com)
-

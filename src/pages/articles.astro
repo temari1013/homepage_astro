@@ -17,13 +17,13 @@ return dateB - dateA;
 ---
 <BaseLayout pageTitle = {pagetitle}>
       
-       <div class=" prose max-w-3xl mx-auto mt-4 text-slate-900 ">
+      <div class=" prose max-w-3xl mx-auto mt-4 text-slate-900 ">
           <h2>記事一覧</h2>    
 
-                     <ul >
-        {sortedPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} pubDate={post.frontmatter.pubDate} />)}
-                            </ul>       
-                     </div>
+            <ul >
+               {sortedPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} pubDate={post.frontmatter.pubDate} />)}
+            </ul>       
+      </div>
 </BaseLayout>
 <meta charset = "UTF-8">
 
