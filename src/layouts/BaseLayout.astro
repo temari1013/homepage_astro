@@ -10,7 +10,11 @@ const { pageTitle } = Astro.props
 <html lang="ja">
   <head>
     <meta charset="utf-8" />
-    <meta name="twitter:image" content="https://docs.astro.build/assets/arc.webp" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="/arc.png" />
+    <meta property="og:image" content="/arc.png">
+    <meta property="og:image:width" content="1281">
+    <meta property="og:image:height" content="721">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
