@@ -4,7 +4,7 @@ title: '記事を投稿日ソート'
 author: 'temari'
 description: '投稿が日付順になるように調整しました。'
 image:
-  url: 'https://docs.astro.build/assets/arc.webp'
+  url: '/arc.png'
   alt: 'The Astro logo on a dark background with a purple gradient arc.'
 pubDate: 2025-04-11
 tags: ['astro', 'feature']
