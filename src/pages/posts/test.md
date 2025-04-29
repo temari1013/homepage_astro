@@ -4,7 +4,7 @@ title: 'test'
 author: 'word tarou'
 description: 'abcde'
 image:
-  url: 'https://docs.astro.build/assets/arc.webp'
+  url: '/arc.png'
   alt: 'The Astro logo on a dark background with a purple gradient arc.'
 pubDate: 2022-07-08
 tags: ['astro', 'blogging']
