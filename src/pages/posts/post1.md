@@ -4,7 +4,7 @@ title: 'astroってやつを使うといいらしい'
 author: 'enaga'
 description: 'わいわい'
 image:
-  url: 'https://docs.astro.build/assets/arc.webp'
+  url: '/arc.png'
   alt: 'The Astro logo on a dark background with a purple gradient arc.'
 pubDate: 2025-02-09
 tags: ['tailwind_CSS', 'nginx', 'astro']
