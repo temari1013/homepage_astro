@@ -6,7 +6,7 @@ on:
   push:
     branches:
       - main
-      - renvate/CI
+      - renvate/*
       - feat/*
 
 jobs:
