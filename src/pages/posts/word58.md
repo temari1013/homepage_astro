@@ -7,7 +7,7 @@ image:
   url: '/arc.png'
   alt: 'The Astro logo on a dark background with a purple gradient arc.'
 pubDate: 2025-12-31
-tags: ['astro', 'blogging','asahi linux','battle','word']
+tags: ['astro', 'blogging', 'asahi linux', 'battle', 'word']
 ---
 
 ## WORDの記事を書きました
