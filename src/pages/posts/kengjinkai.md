@@ -7,7 +7,7 @@ image:
   url: '/arc.png'
   alt: 'The Astro logo on a dark background with a purple gradient arc.'
 pubDate: 2025-12-31
-tags: ['astro', 'blogging', 'tsukuba', ]
+tags: ['astro', 'blogging', 'tsukuba']
 ---
 
 ## 筑波大学広島県人会のwebサイトを作成しました
