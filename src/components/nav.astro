@@ -1,0 +1,44 @@
+---
+import '../styles/global.css'
+import '../components/nav.js'
+---
+
+<div class="block md:hidden">
+  <div class="hamburger pr-5 cursor-pointer group relative w-10 h-8 z-50">
+    <span
+      class="line block w-10 h-1.5 bg-slate-700 absolute top-0 left-0
+               transition ease-in-out duration-300
+               group-[&.expanded]:translate-y-[13px] group-[&.expanded]:rotate-45"
+    ></span>
+
+    <span
+      class="line block w-10 h-1.5 bg-slate-700 absolute top-1/2 left-0 -translate-y-1/2
+               transition ease-in-out duration-300
+               group-[&.expanded]:opacity-0"
+    ></span>
+
+    <span
+      class="line block w-10 h-1.5 bg-slate-700 absolute bottom-0 left-0
+               transition ease-in-out duration-300
+               group-[&.expanded]:-translate-y-[13px] group-[&.expanded]:-rotate-45"
+    ></span>
+  </div>
+
+  <nav
+    class="nav-links
+              fixed top-0 right-0 h-full w-64 bg-white z-40 rounded-l-2xl shadow-lg
+              transition-transform duration-300 ease-in-out
+              transform translate-x-full
+              md:hidden
+              [&.expanded]:translate-x-0
+              p-6"
+  >
+    <ul class="text-slate-700 text-xl font-semibold">
+      <li class="mt-6 mb-4"><a href="/" class="hover:text-blue-500 transition">ホーム</a></li>
+      <li class="mb-4"><a href="/about" class="hover:text-red-500 transition">概要</a></li>
+      <li class="mb-4"><a href="/articles" class="hover:text-green-500 transition">記事</a></li>
+    </ul>
+  </nav>
+</div>
+
+<script src="../components/nav.js"></script>
