@@ -1,6 +1,72 @@
 ---
+import type { MarkdownInstance } from 'astro'
 import BaseLayout from '../layouts/BaseLayout.astro'
 const pagetitle = 'ホーム'
+
+const importedPosts = import.meta.glob('../pages/posts/*.md', { eager: true })
+const allPosts = Object.values(importedPosts) as MarkdownInstance<Record<string, any>>[]
+
+function parseDate(str: string) {
+  return parseInt(str.replace(/-/g, ''), 10)
+}
+
+const latestPost = allPosts.sort((a, b) => parseDate(b.frontmatter.pubDate) - parseDate(a.frontmatter.pubDate))[0]
+const latestImage = latestPost.frontmatter.image
+const latestImageUrl = latestImage?.url ?? '/thumbnail.png'
+const latestImageAlt = latestImage?.alt ?? latestPost.frontmatter.title
 ---
 
-<BaseLayout pageTitle={pagetitle} />
+<BaseLayout pageTitle={pagetitle}>
+  <section class="py-4">
+    <div class="mb-6 flex items-end justify-between gap-4 border-b border-slate-200 pb-3">
+      <div>
+        <p class="text-sm font-semibold tracking-wide text-[#FF7043]">Latest Posts</p>
+        <h2 class="mt-1 text-2xl font-bold text-slate-800">最新記事</h2>
+      </div>
+      <a
+        href="/articles"
+        class="shrink-0 rounded-md border border-slate-300 px-3 py-2 text-sm font-semibold text-slate-700 transition hover:border-[#FF7043] hover:text-[#FF7043]"
+      >
+        一覧へ
+      </a>
+    </div>
+
+    <a
+      href={latestPost.url}
+      class="group block overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:border-[#FF7043] hover:shadow-lg"
+    >
+      <article class="md:grid md:grid-cols-[1.2fr_1fr]">
+        <div class="aspect-[16/9] md:aspect-auto">
+          <img
+            src={latestImageUrl}
+            alt={latestImageAlt}
+            class="h-full w-full object-cover transition duration-300 group-hover:scale-105"
+            loading="eager"
+          />
+        </div>
+        <div class="flex min-h-40 flex-col justify-between p-4">
+          <div>
+            <p class="text-sm font-semibold text-slate-500">{latestPost.frontmatter.pubDate}</p>
+            <h3 class="mt-2 text-lg font-bold leading-snug text-slate-800 group-hover:text-[#FF7043]">
+              {latestPost.frontmatter.title}
+            </h3>
+            {
+              latestPost.frontmatter.description && (
+                <p class="mt-2 line-clamp-2 text-sm leading-6 text-slate-600">
+                  {latestPost.frontmatter.description}
+                </p>
+              )
+            }
+          </div>
+          <div class="mt-4 flex flex-wrap gap-2">
+            {
+              latestPost.frontmatter.tags?.slice(0, 3).map((tag: string) => (
+                <span class="rounded-md bg-slate-100 px-2 py-1 text-xs font-semibold text-slate-600">{tag}</span>
+              ))
+            }
+          </div>
+        </div>
+      </article>
+    </a>
+  </section>
+</BaseLayout>
