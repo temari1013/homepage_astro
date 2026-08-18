@@ -52,17 +52,17 @@ const latestImageAlt = latestImage?.alt ?? latestPost.frontmatter.title
             </h3>
             {
               latestPost.frontmatter.description && (
-                <p class="mt-2 line-clamp-2 text-sm leading-6 text-slate-600">
-                  {latestPost.frontmatter.description}
-                </p>
+                <p class="mt-2 line-clamp-2 text-sm leading-6 text-slate-600">{latestPost.frontmatter.description}</p>
               )
             }
           </div>
           <div class="mt-4 flex flex-wrap gap-2">
             {
-              latestPost.frontmatter.tags?.slice(0, 3).map((tag: string) => (
-                <span class="rounded-md bg-slate-100 px-2 py-1 text-xs font-semibold text-slate-600">{tag}</span>
-              ))
+              latestPost.frontmatter.tags
+                ?.slice(0, 3)
+                .map((tag: string) => (
+                  <span class="rounded-md bg-slate-100 px-2 py-1 text-xs font-semibold text-slate-600">{tag}</span>
+                ))
             }
           </div>
         </div>
