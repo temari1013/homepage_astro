@@ -4,7 +4,7 @@ const { frontmatter } = Astro.props
 import Prose from '../components/Prose.astro'
 ---
 
-<BaseLayout pageTitle={frontmatter.title}>
+<BaseLayout pageTitle={frontmatter.title} image={frontmatter.image}>
   <meta charset="UTF-8" />
 
   <p class="text-gray-600 text-sm">{frontmatter.pubDate.toString().slice(0, 10)}</p>
