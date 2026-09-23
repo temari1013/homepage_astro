@@ -23,4 +23,4 @@ pnpm-debug.log*
 # jetbrains setting folder
 .idea/
 
-/Users/temari/mydev/better-belt/src/pages/posts/hoge.md
+src/pages/posts/hoge.md
