@@ -6,7 +6,7 @@ description: 'google doc のアイコンを絵文字風にカーソル位置に�
 image:
   url: '/iase.png'
   alt: 'The Astro logo on a dark background with a purple gradient arc.'
-pubDate: 2025-12-31
+pubDate: 2026-11-21
 tags: ['astro']
 ---
 
@@ -17,6 +17,7 @@ tags: ['astro']
 
 ## 説明
 icon as emoji を設定した Google ドキュメントを編集できる方が利用できます。文書内で［発言アイコン］→［自分のアイコンを挿入］を選ぶと、ご自身のGoogleプロフィール画像が周りの文字と合わせたサイズでカーソル位置に入ります。
+
 ## プライバシーポリシー
 icon as emoji プライバシーポリシー
 
